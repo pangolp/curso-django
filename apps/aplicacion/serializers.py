@@ -5,10 +5,11 @@ from .models import Curso, Alumno
 class CursoSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = Curso
-		fields = ('id', 'nombre', 'tipo', 'cantidad_horas', 'url')
+		fields = ('nombre', 'tipo', 'cantidad_horas')
 
 
 class AlumnoSerializer(serializers.HyperlinkedModelSerializer):
+
 	class Meta:
 		model = Alumno
-		fields = ('id', 'dni', 'apellido', 'nombre', 'observación', 'curso', 'url')
+		fields = ('dni', 'apellido', 'nombre', 'observación', 'curso')
